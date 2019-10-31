@@ -64,27 +64,27 @@ task checkstyle(type: Checkstyle) {
 }
 
 
-//def getChangeFiles() {
-//    try {
-//        String changeInfo = 'git status -s'.execute(null, project.rootDir).text.trim()
-//        return changeInfo == null ? "" : changeInfo
-//    } catch (Exception e) {
-//        return ""
-//    }
-//}
-//
-//def filterCommitter(String gitstatusinfo) {
-//    ArrayList<String> filterList = new ArrayList<String>();
-//    String[] lines = gitstatusinfo.split("\\n")
-//    for (String line : lines) {
-//        if (line.contains(".java")) {
-//            String[] spliters = line.trim().split(" ")
-//            for (String str : spliters) {
-//                if (str.contains(".java")) {
-//                    filterList.add(str)
-//                }
-//            }
-//        }
-//    }
-//    return filterList
-//}
+def getChangeFiles() {
+    try {
+        String changeInfo = 'git status -s'.execute(null, project.rootDir).text.trim()
+        return changeInfo == null ? "" : changeInfo
+    } catch (Exception e) {
+        return ""
+    }
+}
+
+def filterCommitter(String gitstatusinfo) {
+    ArrayList<String> filterList = new ArrayList<String>()
+    String[] lines = gitstatusinfo.split("\\n")
+    for (String line : lines) {
+        if (line.contains(".java")) {
+            String[] spliters = line.trim().split(" ")
+            for (String str : spliters) {
+                if (str.contains(".java")) {
+                    filterList.add(str)
+                }
+            }
+        }
+    }
+    return filterList
+}
