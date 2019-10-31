@@ -15,5 +15,21 @@ public class TestActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
+        aaa_bbb="13223";
     }
 }

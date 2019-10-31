@@ -23,7 +23,7 @@
     <!--检查文件的长度(行) 默认不超过2000行-->
     <module name="FileLength">
         <property name="severity" value="error" />
-        <property name="max" value="2000" />
+        <property name="max" value="2" />
     </module>
 
     <module name="TreeWalker">
